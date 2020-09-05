@@ -33,7 +33,6 @@ function fetchRepos(topics = ['devstree'], appName = 'aramrafeq', lastRun = '201
 		.set('User-Agent', appName)
 		.then((res) => {
 			const { body } = res;
-
 			const remoteRepos = body.items.map((repo) => {
 				const {
 					full_name,
@@ -58,8 +57,7 @@ function fetchRepos(topics = ['devstree'], appName = 'aramrafeq', lastRun = '201
 				};
 			});
 			return remoteRepos;
-		})
-		.catch(() => []);
+		});
 }
 function writeToRuns(runsArray, date) {
 	fs.writeFileSync('./data/runs.json', JSON.stringify(_.uniq([date, ...runsArray])), 'utf8');
