@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+const cron = require('node-cron');
 const superagent = require('superagent');
 const simpleGit = require('simple-git');
 const fs = require('fs');
@@ -76,7 +77,8 @@ function generateTableMd(reposTemplateStr, reposArray) {
 	return generatedRepoTemplate;
 }
 
-(async () => {
+cron.schedule('* * * * *', async () => {
+	console.log('runing task every minute');
 	const fetchedRepos = await fetchRepos(['devstree'], 'aramrafeq', runs[0]);
 	const updatedRepos = _.uniqBy([...fetchedRepos, ...repos], 'html_url');
 	const reposMD = generateTableMd(reposTemplate(), updatedRepos);
@@ -94,4 +96,5 @@ function generateTableMd(reposTemplateStr, reposArray) {
 	} catch (e) {
 		console.log(e.toString());
 	}
-})();
+	console.log('Finished');
+});
