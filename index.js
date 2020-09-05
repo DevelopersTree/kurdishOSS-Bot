@@ -19,16 +19,16 @@ const footerTemplate = require('./templates/footerTemplate');
 
 const today = moment().format('YYYY-MM-DD').toString();
 
-function fetchRepos(topics = ['devstree'], appName = 'aramrafeq', lastRun = '2015-11-01') {
+function fetchRepos(topics = ['devstree'], appName = 'aramrafeq', lastRun = '2010-11-01') {
 	const url = 'https://api.github.com/search/repositories';
 	const params = {
 		// q: `topic:devstree+is:public+archived:false+created:>2015-11-01`,
 		sort: 'stars',
 		order: 'desc',
 	};
-
+	// +created:>${lastRun} there is no need to consider this at this point
 	return superagent
-		.get(`${url}?q=topic:${topics[0]}+is:public+archived:false+created:>${lastRun}`)
+		.get(`${url}?q=topic:${topics[0]}+is:public+archived:false`)
 		.query(params)
 		.set('User-Agent', appName)
 		.then((res) => {
@@ -41,7 +41,7 @@ function fetchRepos(topics = ['devstree'], appName = 'aramrafeq', lastRun = '201
 					description,
 					contributors_url,
 					stargazers_count,
-
+					created_at,
 				} = repo;
 				return {
 					full_name,
@@ -54,6 +54,7 @@ function fetchRepos(topics = ['devstree'], appName = 'aramrafeq', lastRun = '201
 					owner_html_url: repo.owner.html_url,
 					owner_login: repo.owner.login,
 					fetched_at: today,
+					created_at,
 				};
 			});
 			return remoteRepos;
@@ -75,14 +76,14 @@ function generateTableMd(reposTemplateStr, reposArray) {
 		// `| ${repo.fetched_at} | [${repo.owner_login}](${repo.owner_html_url})
 		// | ${repo.description} | [${repo.full_name}](${repo.html_url})
 		// | ${repo.stargazers_count} | ${i + 1} |\n`;
-		generatedRepoTemplate += `| ${i + 1} | ${repo.stargazers_count} | [${repo.full_name}](${repo.html_url}) | ${repo.description} | [${repo.owner_login}](${repo.owner_html_url}) | ${repo.fetched_at} |\n`;
+		generatedRepoTemplate += `| ${i + 1} | ${repo.stargazers_count} | [${repo.full_name}](${repo.html_url}) | ${repo.description} | ![${repo.owner_login}](${repo.owner_html_url} | width=50) | ${moment(repo.created_at).format('YYYY-MM-DD').toString()} |\n`;
 	});
 	return generatedRepoTemplate;
 }
 async function main() {
 	console.log('searching for new repos...');
 	const fetchedRepos = await fetchRepos(['kurdish-oss'], 'aramrafeq', runs[0]);
-	const updatedRepos = _.uniqBy([...fetchedRepos, ...repos], 'html_url');
+	const updatedRepos = _.uniqBy([...repos, ...fetchedRepos], 'html_url');
 	const reposMD = generateTableMd(reposTemplate(), updatedRepos);
 	// updating readme.md file
 	writeToReadme(`<div dir='rtl'> \n ${readmeTemplate()}   ${reposMD}  ${footerTemplate()} </div>`);
