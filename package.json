@@ -1,5 +1,5 @@
 {
-  "name": "kurdishos-projects-bot",
+  "name": "kurdishoss-bot",
   "version": "1.0.0",
   "description": "A bot to fetch every repository with \"kurdish-os\" topic",
   "main": "index.js",
