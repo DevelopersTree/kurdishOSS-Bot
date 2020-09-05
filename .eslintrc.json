@@ -1,0 +1,16 @@
+{
+    "env": {
+        "commonjs": true,
+        "es2020": true,
+        "node": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "rules": {
+        "no-tabs": "off",
+        "indent": ["error", "tab", { "SwitchCase": 1 }],
+        "import/no-extraneous-dependencies": "off",
+        "import/no-unresolved": "off" //this is because module-alias/register which changes require behaviour at runtime
+    }
+}

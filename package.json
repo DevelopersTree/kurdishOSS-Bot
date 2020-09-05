@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "npx nodemon index.js"
+    "dev": "npx nodemon index.js "
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "./runs.json"
+    ]
   },
   "repository": {
     "type": "git",
@@ -24,10 +29,16 @@
   },
   "homepage": "https://github.com/DevelopersTree/kurdishOs-projects-bot#readme",
   "dependencies": {
+    "lodash": "^4.17.20",
+    "moment": "^2.27.0",
     "node-cron": "^2.0.3",
+    "simple-git": "^2.20.1",
     "superagent": "^6.1.0"
   },
   "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "nodemon": "^2.0.4"
   }
 }
