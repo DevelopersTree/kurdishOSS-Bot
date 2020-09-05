@@ -72,7 +72,7 @@ function writeRepos(reposArray) {
 function generateTableMd(reposTemplateStr, reposArray) {
 	let generatedRepoTemplate = reposTemplateStr;
 	reposArray.forEach((repo, i) => {
-		generatedRepoTemplate += `|${repo.fetched_at}|[${repo.owner_login}](${repo.owner_html_url})|${repo.description}|[${repo.full_name}](${repo.html_url})|${repo.stargazers_count}|${i + 1}|\n`;
+		generatedRepoTemplate += `| ${repo.fetched_at} | [${repo.owner_login}](${repo.owner_html_url}) | ${repo.description} | [${repo.full_name}](${repo.html_url}) | ${repo.stargazers_count} | ${i + 1} |\n`;
 	});
 	return generatedRepoTemplate;
 }
