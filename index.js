@@ -15,6 +15,7 @@ const runs = require('./data/runs');
 const repos = require('./data/repos');
 const reposTemplate = require('./templates/reposTemplate');
 const readmeTemplate = require('./templates/readmeTemplate');
+const footerTemplate = require('./templates/footerTemplate');
 
 const today = moment().format('YYYY-MM-DD').toString();
 
@@ -61,7 +62,7 @@ function fetchRepos(topics = ['devstree'], appName = 'aramrafeq', lastRun = '201
 		.catch(() => []);
 }
 function writeToRuns(runsArray, date) {
-	fs.writeFileSync('./data/runs.json', JSON.stringify([date, ...runsArray]), 'utf8');
+	fs.writeFileSync('./data/runs.json', JSON.stringify(_.uniq([date, ...runsArray])), 'utf8');
 }
 function writeToReadme(generatedMd) {
 	fs.writeFileSync('./README.md', generatedMd, 'utf8');
@@ -83,7 +84,7 @@ cron.schedule('* * * * *', async () => {
 	const updatedRepos = _.uniqBy([...fetchedRepos, ...repos], 'html_url');
 	const reposMD = generateTableMd(reposTemplate(), updatedRepos);
 	// updating readme.md file
-	writeToReadme(`${readmeTemplate()}<div dir='rtl'>\n ${reposMD}</div>`);
+	writeToReadme(`<div dir='rtl'> \n ${readmeTemplate()} ${reposMD} ${footerTemplate()}</div>`);
 	// update repos.json
 	writeRepos(updatedRepos);
 	//  log latest run for next fetch to fetch latest repostories
@@ -96,5 +97,5 @@ cron.schedule('* * * * *', async () => {
 	} catch (e) {
 		console.log(e.toString());
 	}
-	console.log('Finished');
+	console.log('Finished...');
 });

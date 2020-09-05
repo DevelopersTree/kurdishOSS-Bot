@@ -1,4 +1,7 @@
 module.exports = () => {
-	const stringTemplate = '# kurdishOSS-Bot\nA bot to fetch every repository with "kurdish-os" topic\n';
+	const stringTemplate = `# سه‌ره‌تا\n
+ئه‌م پرۆژه‌یه‌ بۆتێكه‌ كه‌ هه‌وڵده‌دات هه‌موو پرۆژه‌ سه‌رچاوه‌كراوه‌ كوردیه‌كان لێره‌دا زیادبكات خۆكارانه‌ نوێده‌بێته‌وه
+،ئه‌م بۆته‌ سه‌رچاوه‌كراوه‌یه‌ و ده‌توانیت گۆرانكاری تێدابكه‌یت‌
+\n`;
 	return stringTemplate;
 };
