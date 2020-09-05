@@ -84,7 +84,7 @@ cron.schedule('* * * * *', async () => {
 	const updatedRepos = _.uniqBy([...fetchedRepos, ...repos], 'html_url');
 	const reposMD = generateTableMd(reposTemplate(), updatedRepos);
 	// updating readme.md file
-	writeToReadme(`<div dir='rtl'> \n ${readmeTemplate()} ${reposMD} ${footerTemplate()}</div>`);
+	writeToReadme(`<div dir='rtl'> \n ${readmeTemplate()} </div> ${reposMD} <div dir='rtl'> \n  ${footerTemplate()} </div>`);
 	// update repos.json
 	writeRepos(updatedRepos);
 	//  log latest run for next fetch to fetch latest repostories
