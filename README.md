@@ -1,15 +1,15 @@
 <div dir='rtl'> 
- # سه‌ره‌تا
+ ## سه‌ره‌تا
 
 ئه‌م پرۆژه‌یه‌ بۆتێكه‌ كه‌ هه‌وڵده‌دات هه‌موو پرۆژه‌ سه‌رچاوه‌كراوه‌ كوردیه‌كان لێره‌دا زیادبكات خۆكارانه‌ نوێده‌بێته‌وه
 ،ئه‌م بۆته‌ سه‌رچاوه‌كراوه‌یه‌ و ده‌توانیت گۆرانكاری تێدابكه‌یت‌
 
   ## لیستی پرۆژه‌ سه‌رچاوه‌كراوه‌كان 
- | ئه‌ستێره‌ | ناو | ده‌رباره‌ | له‌لایه‌ن | به‌رواری زیادكردن‌ | # |
+ | # | ئه‌ستێره‌ | ناو | ده‌رباره‌ | له‌لایه‌ن | به‌رواری زیادكردن‌ | 
 |------------------|:-------:|-------|:---:|:-------:|:-:|
-| 2020-09-05 | [DevelopersTree](https://github.com/DevelopersTree) | Recreation for nawikurdi website using nodejs and reactjs | [DevelopersTree/nawikurdi](https://github.com/DevelopersTree/nawikurdi) | 5 | 1 |
-| 2020-09-05 | [DevelopersTree](https://github.com/DevelopersTree) | landing page for | [DevelopersTree/devs-krd](https://github.com/DevelopersTree/devs-krd) | 1 | 2 |
-| 2020-09-05 | [DevelopersTree](https://github.com/DevelopersTree) | makes your github page website appear as {username}.devs.krd automatically  | [DevelopersTree/profile-devs-krd](https://github.com/DevelopersTree/profile-devs-krd) | 0 | 3 |
+| 1 | 5 | [DevelopersTree/nawikurdi](https://github.com/DevelopersTree/nawikurdi) | Recreation for nawikurdi website using nodejs and reactjs | [DevelopersTree](https://github.com/DevelopersTree) | 2020-09-05 |
+| 2 | 1 | [DevelopersTree/devs-krd](https://github.com/DevelopersTree/devs-krd) | landing page for | [DevelopersTree](https://github.com/DevelopersTree) | 2020-09-05 |
+| 3 | 0 | [DevelopersTree/profile-devs-krd](https://github.com/DevelopersTree/profile-devs-krd) | makes your github page website appear as {username}.devs.krd automatically  | [DevelopersTree](https://github.com/DevelopersTree) | 2020-09-05 |
   # چۆن پرۆژه‌كه‌م زیادبكه‌م؟
 بۆ زیادكردنی پرۆژه‌كه‌ت ته‌نها تاگی یان تۆپیكی kurdish-oss ی بۆ زیاد بكه‌ خۆكارانه‌ بۆته‌كه‌مان لێره‌دا زیادی ده‌كات
  </div>
