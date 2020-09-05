@@ -20,7 +20,7 @@
 | 10 | 0 | [DevelopersTree/wiki](https://github.com/DevelopersTree/wiki) | helper tools for contributing to wikipedia | [<div style="width:25px;">![DevelopersTree](https://avatars3.githubusercontent.com/u/32271426?v=4)</div>](https://github.com/DevelopersTree) |
 | 11 | 0 | [DevelopersTree/profile-devs-krd](https://github.com/DevelopersTree/profile-devs-krd) | makes your github page website appear as {username}.devs.krd automatically  | [<div style="width:25px;">![DevelopersTree](https://avatars3.githubusercontent.com/u/32271426?v=4)</div>](https://github.com/DevelopersTree) |
 | 12 | 0 | [DevelopersTree/Encoding](https://github.com/DevelopersTree/Encoding) | Convert text to UTF-8, UTF-16 and UTF-32 online | [<div style="width:25px;">![DevelopersTree](https://avatars3.githubusercontent.com/u/32271426?v=4)</div>](https://github.com/DevelopersTree) |
-| 13 | 0 | [DevelopersTree/kurdishOSS-Bot](https://github.com/DevelopersTree/kurdishOSS-Bot) | A bot to fetch every repository with "kurdish-os" topic  | [<div style="width:25px;">![DevelopersTree](https://avatars3.githubusercontent.com/u/32271426?v=4)</div>](https://github.com/DevelopersTree) |
+| 13 | 0 | [DevelopersTree/kurdishOSS-Bot](https://github.com/DevelopersTree/kurdishOSS-Bot) | A bot to fetch every repository with "kurdish-oss" topic  | [<div style="width:25px;">![DevelopersTree](https://avatars3.githubusercontent.com/u/32271426?v=4)</div>](https://github.com/DevelopersTree) |
   # چۆن پرۆژه‌كه‌م زیادبكه‌م؟
 بۆ زیادكردنی پرۆژه‌كه‌ت ته‌نها تاگی یان تۆپیكی kurdish-oss ی بۆ زیاد بكه‌ خۆكارانه‌ بۆته‌كه‌مان لێره‌دا زیادی ده‌كات
  </div>
