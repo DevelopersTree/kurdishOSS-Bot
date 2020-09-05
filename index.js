@@ -81,10 +81,9 @@ function generateTableMd(reposTemplateStr, reposArray) {
 	});
 	return generatedRepoTemplate;
 }
-
-cron.schedule('* * * * *', async () => {
-	console.log('runing task every minute');
-	const fetchedRepos = await fetchRepos(['devstree'], 'aramrafeq', runs[0]);
+async function main() {
+	console.log('searching for new repos...');
+	const fetchedRepos = await fetchRepos(['kurdish-oss'], 'aramrafeq', runs[0]);
 	const updatedRepos = _.uniqBy([...fetchedRepos, ...repos], 'html_url');
 	const reposMD = generateTableMd(reposTemplate(), updatedRepos);
 	// updating readme.md file
@@ -101,5 +100,11 @@ cron.schedule('* * * * *', async () => {
 	} catch (e) {
 		console.log(e.toString());
 	}
-	console.log('Finished...');
+	console.log('Done...');
+}
+(async () => {
+	await main();
+})();
+cron.schedule('0 * * * *', async () => {
+	main();
 });
