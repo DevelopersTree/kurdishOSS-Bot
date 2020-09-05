@@ -76,7 +76,7 @@ function generateTableMd(reposTemplateStr, reposArray) {
 		// `| ${repo.fetched_at} | [${repo.owner_login}](${repo.owner_html_url})
 		// | ${repo.description} | [${repo.full_name}](${repo.html_url})
 		// | ${repo.stargazers_count} | ${i + 1} |\n`;
-		generatedRepoTemplate += `| ${i + 1} | ${repo.stargazers_count} | [${repo.full_name}](${repo.html_url}) | ${repo.description} | ![${repo.owner_login}](${repo.owner_html_url} | width=50) | ${moment(repo.created_at).format('YYYY-MM-DD').toString()} |\n`;
+		generatedRepoTemplate += `| ${i + 1} | ${repo.stargazers_count} | [${repo.full_name}](${repo.html_url}) | ${repo.description} | <div style="width:50px;">![${repo.owner_login}](${repo.owner_html_url})</div> | ${moment(repo.created_at).format('YYYY-MM-DD').toString()} |\n`;
 	});
 	return generatedRepoTemplate;
 }
