@@ -1,0 +1,33 @@
+{
+  "name": "kurdishos-projects-bot",
+  "version": "1.0.0",
+  "description": "A bot to fetch every repository with \"kurdish-os\" topic",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "npx nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevelopersTree/kurdishOs-projects-bot.git"
+  },
+  "keywords": [
+    "kurdish-os",
+    "devstree",
+    "devs.krd",
+    "developerstree"
+  ],
+  "author": "Developerstree",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevelopersTree/kurdishOs-projects-bot/issues"
+  },
+  "homepage": "https://github.com/DevelopersTree/kurdishOs-projects-bot#readme",
+  "dependencies": {
+    "node-cron": "^2.0.3",
+    "superagent": "^6.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
