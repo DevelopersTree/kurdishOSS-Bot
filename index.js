@@ -17,8 +17,6 @@ const reposTemplate = require('./templates/reposTemplate');
 const readmeTemplate = require('./templates/readmeTemplate');
 const footerTemplate = require('./templates/footerTemplate');
 
-const today = moment().format('YYYY-MM-DD').toString();
-
 function fetchRepos(topics = ['devstree'], appName = 'aramrafeq', lastRun = '2010-11-01') {
 	const url = 'https://api.github.com/search/repositories';
 	const params = {
@@ -32,6 +30,7 @@ function fetchRepos(topics = ['devstree'], appName = 'aramrafeq', lastRun = '201
 		.query(params)
 		.set('User-Agent', appName)
 		.then((res) => {
+			const today = moment().format('YYYY-MM-DD').toString();
 			const { body } = res;
 			const remoteRepos = body.items.map((repo) => {
 				const {
@@ -81,6 +80,8 @@ function generateTableMd(reposTemplateStr, reposArray) {
 	return generatedRepoTemplate;
 }
 async function main() {
+	const today = moment().format('YYYY-MM-DD').toString();
+
 	console.log('searching for new repos...');
 	const fetchedRepos = await fetchRepos(['kurdish-oss'], 'aramrafeq', runs[0]);
 	const updatedRepos = _.uniqBy([...repos, ...fetchedRepos], 'html_url');
