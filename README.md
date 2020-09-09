@@ -22,6 +22,7 @@
 | 12 | 0 | [DevelopersTree/profile-devs-krd](https://github.com/DevelopersTree/profile-devs-krd) | makes your github page website appear as {username}.devs.krd automatically  | [<div style="width:25px;">![DevelopersTree](https://avatars3.githubusercontent.com/u/32271426?v=4)</div>](https://github.com/DevelopersTree) |
 | 13 | 0 | [DevelopersTree/wiki](https://github.com/DevelopersTree/wiki) | helper tools for contributing to wikipedia | [<div style="width:25px;">![DevelopersTree](https://avatars3.githubusercontent.com/u/32271426?v=4)</div>](https://github.com/DevelopersTree) |
 | 14 | 0 | [DevelopersTree/Encoding](https://github.com/DevelopersTree/Encoding) | Convert text to UTF-8, UTF-16 and UTF-32 online | [<div style="width:25px;">![DevelopersTree](https://avatars3.githubusercontent.com/u/32271426?v=4)</div>](https://github.com/DevelopersTree) |
+| 15 | 15 | [dolanskurd/kurdish](https://github.com/dolanskurd/kurdish) | Kurdish Language Library for converting characters and digits in Persian, English and Arabic to Kurdish and vice versa. | [<div style="width:25px;">![dolanskurd](https://avatars2.githubusercontent.com/u/18519747?v=4)</div>](https://github.com/dolanskurd) |
   # چۆن پرۆژه‌كه‌م زیادبكه‌م؟
 بۆ زیادكردنی پرۆژه‌كه‌ت ته‌نها تاگی یان تۆپیكی kurdish-oss ی بۆ زیاد بكه‌ خۆكارانه‌ بۆته‌كه‌مان لێره‌دا زیادی ده‌كات
  </div>
